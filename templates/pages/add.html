@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+  <div class="box">
+      <h1>Add New Film</h1>
+      <form method="POST">
+
+          {% csrf_token %}
+          {{form}}
+      
+        <input type="submit" value="Add">
+      </form>
+  </div>
+</div>
+
+{% endblock %}

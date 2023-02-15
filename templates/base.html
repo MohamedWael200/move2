@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style/style.css' %}">
+  <title>Home</title>
+</head>
+<body  style="background: #000;">
+
+{% include 'parts/navbar.html' %}
+{% block content %}
+
+{% endblock %}
+{% include 'parts/footer.html' %}
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

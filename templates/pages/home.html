@@ -1,0 +1,49 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<!-- Start landing -->
+<div class="landing">
+</div>
+<!-- End landing-->
+
+
+
+<!-- Search -->
+<form class="cat">
+    <!-- Search -->
+    <div class="search">
+       <input type="text" name="" id="" placeholder="Find Your Favorit Movies">
+       <i class="fas fa-search"></i>
+      </div>
+</form>
+<!-- end search -->
+
+
+
+<!-- card -->
+<div class="containers">
+  {% for mo in move %}
+  <div class="card">
+    <div class="imgbx">
+      <img src="{{mo.moveImage.url}}" alt="">
+    </div>
+    <div class="content">
+      <h2>{{mo.moveName}}</h2>
+      <p class="title">{{mo.movesumarize}}</p>
+        <a href="update.html" class="updates">Update</a>
+        <a href="delete.html" class="deletes">Delete</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<!-- end card -->
+<div class="containers" >
+<button type="button" class="cats"><a href="movies.html">See More</a></button>
+</div>
+
+
+
+{% endblock %}
